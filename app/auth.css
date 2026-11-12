@@ -1,0 +1,255 @@
+/* Style bersama untuk halaman login & register */
+.auth {
+  --green: #1b4d3a;
+  --green-dark: #12382a;
+  --yellow: #f4b928;
+  --bg: #f4f6f2;
+  --line: #dfe5dc;
+  --text: #17251e;
+  --muted: #6b7a72;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  min-height: 100vh;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--text);
+}
+
+/* ---------- Panel kiri ---------- */
+.auth-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 56px;
+  color: #fff;
+  /* Mau pakai foto sekolah? Taruh di public/sekolah.jpg */
+  background:
+    linear-gradient(rgba(18, 56, 42, 0.88), rgba(18, 56, 42, 0.92)),
+    url("/sekolah.jpg") center / cover no-repeat,
+    var(--green-dark);
+}
+.auth-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+.auth-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--yellow);
+  color: var(--green-dark);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+}
+.auth-brand strong { display: block; font-size: 14px; }
+.auth-brand small { display: block; font-size: 11px; opacity: 0.7; }
+
+.auth-tag {
+  color: var(--yellow);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.auth-hero h1 {
+  font-size: 42px;
+  line-height: 1.1;
+  font-weight: 800;
+  margin: 14px 0;
+}
+.auth-hero p {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.8;
+  max-width: 420px;
+}
+.auth-steps {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+  display: grid;
+  gap: 12px;
+}
+.auth-steps li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+}
+.auth-steps .num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+}
+.auth-stats {
+  display: flex;
+  gap: 40px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+.auth-stats strong { display: block; font-size: 20px; }
+.auth-stats span { font-size: 11px; opacity: 0.7; }
+
+/* ---------- Kolom kanan (form) ---------- */
+.auth-right {
+  position: relative;
+  background: var(--bg);
+  display: grid;
+  place-items: center;
+  padding: 40px 7%;
+}
+.auth-back {
+  position: absolute;
+  top: 28px;
+  left: 7%;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px 8px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--green);
+  text-decoration: none;
+}
+.auth-back:hover { background: rgba(27, 77, 58, 0.08); }
+.auth-back svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.auth-card { width: 100%; max-width: 400px; }
+.auth-eyebrow { font-size: 12px; color: var(--muted); }
+.auth-card h2 { font-size: 26px; font-weight: 800; margin: 6px 0; }
+.auth-sub { font-size: 13px; color: var(--muted); margin: 0 0 24px; }
+.auth-card a { color: var(--green); font-weight: 600; text-decoration: none; }
+.auth-card a:hover { text-decoration: underline; }
+
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.field { margin-bottom: 14px; }
+.field label { display: block; font-size: 12px; font-weight: 600; margin-bottom: 6px; }
+.auth-card input[type="text"],
+.auth-card input[type="email"],
+.auth-card input[type="password"] {
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  font-size: 14px;
+  color: var(--text);
+}
+.auth-card input:focus {
+  outline: 2px solid rgba(27, 77, 58, 0.25);
+  border-color: var(--green);
+}
+.field-pw { position: relative; }
+.field-pw input { padding-right: 42px !important; }
+.pw-toggle {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  padding: 6px;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+}
+.pw-toggle svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.row-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+.check {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.check.agree { margin-bottom: 16px; }
+.check input { margin-top: 2px; }
+
+.auth-error,
+.auth-success {
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+.auth-error { background: #fdecec; color: #a12626; border: 1px solid #f5c2c2; }
+.auth-success { background: #e8f5ee; color: #1b6b45; border: 1px solid #bfe0cc; }
+
+.btn-primary,
+.btn-google {
+  width: 100%;
+  height: 44px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-primary { border: 0; background: var(--green); color: #fff; }
+.btn-primary:hover { background: var(--green-dark); }
+.btn-primary:disabled { opacity: 0.6; cursor: wait; }
+.btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+}
+.btn-google:disabled { opacity: 0.55; cursor: not-allowed; }
+.g-logo { color: #4285f4; font-weight: 800; }
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+.divider::before,
+.divider::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.auth-foot { text-align: center; font-size: 12px; color: var(--muted); margin-top: 16px; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .auth { grid-template-columns: 1fr; }
+  .auth-left { padding: 28px 24px; gap: 24px; }
+  .auth-hero h1 { font-size: 32px; }
+  .auth-steps, .auth-stats { display: none; }
+  .auth-right { padding: 72px 24px 32px; }
+  .auth-back { left: 16px; top: 20px; }
+}
+@media (max-width: 480px) {
+  .form-grid { grid-template-columns: 1fr; gap: 0; }
+}
